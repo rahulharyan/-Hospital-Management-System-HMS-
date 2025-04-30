@@ -1,0 +1,30 @@
+{% extends "main.html" %}
+{% block content %}
+<div class="home-container">
+    <h1>Welcome to Our Hospital Management System</h1>
+    <p>
+        Our system provides an efficient way to manage patient records, doctor schedules, appointments, and billing.
+        It is designed to streamline hospital operations and enhance patient care.
+    </p>
+
+    <div class="features">
+        <h2>Key Features</h2>
+        <ul>
+            <li>👨‍⚕️ Doctor & Staff Management</li>
+            <li>🧑‍⚕️ Patient Registration & History</li>
+            <li>📅 Appointment Scheduling</li>
+            <li>💊 Prescription & Medical Records</li>
+            <li>💰 Billing & Payments</li>
+            <li>📊 Admin Dashboard & Reports</li>
+        </ul>
+    </div>
+
+    <div class="cta-buttons">
+        <a href="{% url 'add_patient' %}" class="btn">Register Patient</a>
+        {% comment %} <a href="{% url 'appointment' %}" class="btn">Book Appointment</a> {% endcomment %}
+    </div>
+    {% if weather_data %}
+        <h2>{{whether_data.name}}</h2>
+    {% endif %}
+</div>
+{% endblock content %}

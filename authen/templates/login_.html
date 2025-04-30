@@ -1,0 +1,18 @@
+{% extends "main.html" %}
+{% block content %}
+<center>
+    <h2>This is login page</h2>
+    {% if wrong_credentials %}
+        <h2>Something gets wrong</h2>
+    {% endif %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        <label for="">username</label>
+        <input type="text" name="username" placeholder="username">
+        <br>
+        <label for="">Password</label>
+        <input type="text" name="password" placeholder="password">
+        <button type="submit">Login</button>
+    </form>
+</center>
+{% endblock content %}

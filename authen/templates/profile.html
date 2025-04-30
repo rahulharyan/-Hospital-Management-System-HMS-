@@ -1,0 +1,21 @@
+{% extends "main.html" %}
+{% block content %}
+<center>
+    <h2>Profile</h2>
+    <br>
+    <div class="profile_data">
+        <h2>Name:{{request.user.first_name}}</h2>
+        <h2>Surname:{{request.user.last_name}}</h2>
+        <h2>email:{{request.user.email}}</h2>
+        <h2>username:{{request.user.username}}</h2>
+        <div class="profile_change_pass_button">
+            <a href="{% url 'change_password' %}">Change Password</a>
+        </div>
+        <div class="update_profile_btn">
+            <a href="{% url 'update_profile' %}">Update Profile</a>
+        </div>
+        
+    </div>
+
+</center>
+{% endblock content %}

@@ -1,0 +1,21 @@
+{% extends "main.html" %}
+{% block content %}
+<center>
+    <h2>This is page of a Update profile</h2>
+    <div class="update_profile_page">
+        <form action="" method="POST">
+            {% csrf_token %}
+            <label for="">Change Name</label>
+            <input type="text" name='firstname' value="{{request.user.first_name}}"><br>
+            <label for="">Change surname</label>
+            <input type="text" name='lastname' value="{{request.user.last_name}}"><br>
+            <label for="">Change email</label>
+            <input type="text" name='email' value="{{request.user.email}}"><br>
+            <label for="">Change username</label>
+            <input type="text" name='username' value="{{request.user.username}}"><br>
+            <button type="submit">Update Profile</button>
+
+        </form>
+    </div>
+</center>
+{% endblock content %}
